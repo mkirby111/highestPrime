@@ -13,7 +13,6 @@ public class HighestPrime {
     /**
      * Main class runs the program for the given duration and displays the final results
      * @param args
-     * @throws InterruptedException
      */
     public static void main(String[] args) {
         int maxPrime = 2;
