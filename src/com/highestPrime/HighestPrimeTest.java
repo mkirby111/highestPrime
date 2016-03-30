@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by mkirby on 3/29/16.
+ * Tests that the isPrime() method returns expected boolean output
  */
 public class HighestPrimeTest {
     @Test

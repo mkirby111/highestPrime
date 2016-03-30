@@ -1,13 +1,20 @@
 package com.highestPrime;
 
 /**
- *
+ * This class calculates the highest prime number possible (given its algorithm and implementation).
+ * The program runs for an exact duration and displays the highest prime number found at given intervals
+ * throughout its progress. When completed, the highest prime number is displayed.
  */
 public class HighestPrime {
     private static long time = System.currentTimeMillis();
     private static long duration = 60000;
     private static long totalTime =  time + duration;
 
+    /**
+     * Main class runs the program for the given duration and displays the final results
+     * @param args
+     * @throws InterruptedException
+     */
     public static void main(String[] args) throws InterruptedException {
         int maxPrime = 2;
         int num = 1;
@@ -24,7 +31,7 @@ public class HighestPrime {
     }
 
     /**
-     *
+     * Function to display the final results
      * @param maxPrime
      * @param seconds
      */
@@ -35,14 +42,31 @@ public class HighestPrime {
         System.out.println("===============================================");
     }
 
+    /**
+     * Function to display the progress of the calculated highest prime number
+     * @param maxPrime
+     * @throws InterruptedException
+     */
     private static void printProgress(int maxPrime) throws InterruptedException {
         System.out.println("Time: " + getElapsedTime() + " seconds\t\t" + "Highest Prime: " + maxPrime);
     }
 
+    /**
+     * Function to get the elapsed time in seconds
+     * @return int
+     */
     private static int getElapsedTime() {
         return (int) ((System.currentTimeMillis()-time)/1000);
     }
 
+    /**
+     * Function that returns a boolean value: true if the parameter number is prime; false if not
+     * NOTE: this code was written using the "Sieve of Eratosthenes" algorithm as reference
+     * (from "Introduction to The Design and Analysis of Algorithms" by Anany Levitin).
+     *
+     * @param n
+     * @return
+     */
     public static boolean isPrime(int n) {
         //check for negative, 0, or 1
         if (n<=1) return false;
