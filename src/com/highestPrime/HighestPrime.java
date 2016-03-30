@@ -7,7 +7,7 @@ package com.highestPrime;
  */
 public class HighestPrime {
     private static long time = System.currentTimeMillis();
-    private static long duration = 60000;
+    private static long duration = 60000;  //60 seconds
     private static long totalTime =  time + duration;
 
     /**
