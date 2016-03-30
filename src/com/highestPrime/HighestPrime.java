@@ -62,7 +62,6 @@ public class HighestPrime {
      * Function that returns a boolean value: true if the parameter number is prime; false if not
      * NOTE: this code was written using the "Sieve of Eratosthenes" algorithm as reference
      * (from "Introduction to The Design and Analysis of Algorithms" by Anany Levitin).
-     *
      * @param n
      * @return
      */
