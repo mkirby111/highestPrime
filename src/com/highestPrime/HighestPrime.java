@@ -4,18 +4,30 @@ package com.highestPrime;
  * Created by mkirby on 3/29/16.
  */
 public class HighestPrime {
+    private static long startTime = System.currentTimeMillis();
+    private static long duration = 5000;
+    private static long totalTime =  startTime + duration;
+    private static int seconds = 0;
+    private static int num = 1;
+
     public static void main(String[] args) throws InterruptedException {
-        long startTime = System.currentTimeMillis();
-        long duration = 5000;
-        long totalTime =  startTime + duration;
-        int seconds = 0;
+        int maxPrime = 2;
 
         while (System.currentTimeMillis() <= totalTime) {
-            System.out.println("Time: " + seconds + " seconds");
+            if (isPrime(num) == true)
+                maxPrime =num;
+            printProgress(maxPrime);
+            num++;
+        }
+        System.out.println("\n======================================================\n");
+        System.out.println("Total Time: " +  seconds + " seconds");
+        System.out.println("Highest Prime: " + maxPrime);
+    }
+
+    private static void printProgress(int maxPrime) throws InterruptedException {
+            System.out.println("Time: " + seconds + " seconds\t" + "Highest Prime: " + maxPrime);
             Thread.sleep(1000);
             seconds++;
-        }
-        System.out.println("Total Time: " +  seconds + " seconds");
     }
 
     public static boolean isPrime(int n) {
