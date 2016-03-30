@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class HighestPrimeTest {
     @Test
     public void testPrimeNumber() {
-        assertTrue(HighestPrime.isPrime(7));
+        assertTrue(HighestPrime.isPrime(25765189));
     }
 
 }

@@ -15,7 +15,7 @@ public class HighestPrime {
      * @param args
      * @throws InterruptedException
      */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         int maxPrime = 2;
         int num = 1;
 
@@ -47,7 +47,7 @@ public class HighestPrime {
      * @param maxPrime
      * @throws InterruptedException
      */
-    private static void printProgress(int maxPrime) throws InterruptedException {
+    private static void printProgress(int maxPrime) {
         System.out.println("Time: " + getElapsedTime() + " seconds\t\t" + "Highest Prime: " + maxPrime);
     }
 
